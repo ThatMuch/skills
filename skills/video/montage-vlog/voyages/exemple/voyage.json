@@ -1,0 +1,49 @@
+{
+  "destination": "Exempleville",
+  "pays": "Pays-exemple",
+  "dates": ["AAAA-MM-JJ", "AAAA-MM-JJ"],
+  "jours": [
+    {
+      "n": 1,
+      "date": "AAAA-MM-JJ",
+      "source": "<PROJET_RUSH>/jour-01",
+      "duree_cible_s": null
+    }
+  ],
+  "lieux": [
+    {
+      "nom": "Quartier exemple",
+      "lat": 0,
+      "lon": 0,
+      "source": "gps",
+      "verifie": false
+    }
+  ],
+  "ambiance_musicale": {
+    "mots_cles": ["ambient", "cordes"],
+    "par_role": {
+      "accroche": "energique",
+      "decouverte": "calme",
+      "emotion": "doux",
+      "fete": "rythme",
+      "nuit": "ambient"
+    }
+  },
+  "morceaux": [
+    {
+      "titre": "Titre exemple",
+      "artiste": "Artiste CC",
+      "licence": "CC BY 4.0",
+      "lien": "https://exemple.invalid/morceau",
+      "credit": "Titre exemple par Artiste CC — CC BY 4.0",
+      "valide_par_auteur": false,
+      "utilisations": 0
+    }
+  ],
+  "etalonnage": {
+    "teinte_ombres": "teal",
+    "teinte_lumieres": "chaud",
+    "saturation": 1.28
+  },
+  "duree_film_cible_s": 3600
+}
