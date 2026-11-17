@@ -12,14 +12,25 @@ skills/
 │   └── sx-note-de-frais-ligne/
 ├── ai/
 │   └── llm-council/
+├── design/
+│   ├── experteam-design/
+│   └── pptx-vers-presentation-interactive/
 ├── marketing/
+│   ├── ai-seo/             # + evals/, references/
 │   ├── analytics/          # + references/, evals/
+│   ├── cold-email/         # + evals/, references/
+│   ├── emails/             # + evals/, references/
+│   ├── ma-banque-pro-articles/
+│   ├── product-marketing/  # + evals/
+│   ├── programmatic-seo/   # + evals/, references/
 │   ├── seo-audit/          # + references/, evals/
 │   ├── social/
 │   └── substack-editor/
 └── video/
     ├── montage-vlog/       # + retours.md (exemple), voyages/exemple/
-    └── podcast-to-vertical-shorts/
+    ├── podcast-to-vertical-shorts/
+    ├── prompteur-script/
+    └── video/              # + evals/, references/
 templates/SKILL.template.md
 scripts/validate_skills.py
 ```
@@ -33,12 +44,22 @@ Une catégorie regroupe les skills. Le dossier que l'agent charge est celui du s
 | --- | --- | --- |
 | [sx-note-de-frais-ligne](skills/admin/sx-note-de-frais-ligne/SKILL.md) | admin | Ajouter une ligne de frais (train, taxi, hôtel, repas) avec justificatif dans la note de frais Everwin SX de l'organisation. |
 | [llm-council](skills/ai/llm-council/SKILL.md) | ai | When the user wants several LLMs' opinions on a question, a decision cross-checked by a 'council' of models, or asks to run the LLM… |
+| [experteam-design](skills/design/experteam-design/SKILL.md) | design | Design system Experteam (by everience) pour créer des sites, landing pages et présentations interactives HTML. À utiliser dès que… |
+| [pptx-vers-presentation-interactive](skills/design/pptx-vers-presentation-interactive/SKILL.md) | design | Transforme un PowerPoint (.pptx) en présentation web interactive (HTML publiée en Artifact), en gardant le contenu d'origine et en… |
+| [ai-seo](skills/marketing/ai-seo/SKILL.md) | marketing | When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers. Also use when the… |
 | [analytics](skills/marketing/analytics/SKILL.md) | marketing | When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions "set up tracking,"… |
+| [cold-email](skills/marketing/cold-email/SKILL.md) | marketing | Write B2B cold emails and follow-up sequences that get replies. Use when the user wants to write cold outreach emails, prospecting emails,… |
+| [emails](skills/marketing/emails/SKILL.md) | marketing | When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program. Also use… |
+| [ma-banque-pro-articles](skills/marketing/ma-banque-pro-articles/SKILL.md) | marketing | Rédige des articles de blog SEO pour ma-banque.pro, comparateur de banques professionnelles et néobanques. Utilise ce skill dès que… |
+| [product-marketing](skills/marketing/product-marketing/SKILL.md) | marketing | When the user wants to create or update their product marketing context document. Also use when the user mentions 'product context,'… |
+| [programmatic-seo](skills/marketing/programmatic-seo/SKILL.md) | marketing | When the user wants to create SEO-driven pages at scale using templates and data. Also use when the user mentions "programmatic SEO,"… |
 | [seo-audit](skills/marketing/seo-audit/SKILL.md) | marketing | When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions "SEO audit," "technical SEO,"… |
 | [social](skills/marketing/social/SKILL.md) | marketing | When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram, TikTok, or Facebook,… |
 | [substack-editor](skills/marketing/substack-editor/SKILL.md) | marketing | Use when turning a topic or a finished text into a Substack post ready to paste, or when putting an article into the Substack editor as a… |
 | [montage-vlog](skills/video/montage-vlog/SKILL.md) | video | À utiliser pour monter un vlog de voyage à partir de rushs bruts (DJI, iPhone, GoPro), d'une journée test jusqu'au film complet. |
 | [podcast-to-vertical-shorts](skills/video/podcast-to-vertical-shorts/SKILL.md) | video | When cutting a long podcast or interview video (e.g. YouTube) into viral vertical shorts for TikTok, Reels or YouTube Shorts. |
+| [prompteur-script](skills/video/prompteur-script/SKILL.md) | video | Génère un script de prompteur pour vidéos YouTube/réseaux sociaux, à partir de notes/un brouillon existant, d'un simple sujet (une phrase,… |
+| [video](skills/video/video/SKILL.md) | video | When the user wants to create, generate, or produce video content using AI tools or programmatic frameworks. Also use when the user… |
 <!-- skills-index:end -->
 
 L'index est produit par `python3 scripts/validate_skills.py --write-index`. La description est le début du champ `description` (en français ou en anglais, selon la skill).
@@ -86,7 +107,7 @@ Certaines skills ont besoin d'une valeur que seule la personne connaît. Cette v
 | `sx-note-de-frais-ligne` | `<VOTRE_EMAIL_PERSO>`, `<VOTRE_COMPTE_SNCF>`, `<DOSSIER_DE_TRAVAIL>`, `<URL_CONNEXION_SX>`, `<ORGANISATION>`, `<AFFAIRE_PAR_DEFAUT>` |
 | `montage-vlog` | `<CHARTE_GRAPHIQUE>`, `<PROJET_RUSH>`, `<DOSSIER_RETOURS>`, `<MACHINE_RUSH>`, `<DESTINATION>`, `<LANGUE_PAROLE>`, `<DOSSIER_OUTILS_MIX>`, `<DOSSIER_DRIVE>`, plus le nom de l'auteur, de la chaîne et du monteur (le texte dit « l'auteur ») |
 | `llm-council` | `OPENROUTER_API_KEY` dans l'environnement de l'agent |
-| `analytics`, `seo-audit`, `social`, `substack-editor`, `podcast-to-vertical-shorts` | rien |
+| `ai-seo`, `analytics`, `cold-email`, `emails`, `experteam-design`, `ma-banque-pro-articles`, `pptx-vers-presentation-interactive`, `product-marketing`, `programmatic-seo`, `prompteur-script`, `seo-audit`, `social`, `substack-editor`, `podcast-to-vertical-shorts`, `video` | rien |
 
 Règle : **pas de donnée personnelle ni de secret dans git.** Pas d'e-mail, de mot de passe, de clé, de jeton, de chemin `/workspace/…` propre à un bot, de compte, d'URL de connexion interne, ni de voyage réel. Les journaux de retours et les `voyage.json` réels de `montage-vlog` restent locaux (`retours.local.md`, `voyages/<destination>/`, ignorés par git). `voyages/exemple/` est un exemple fictif.
 
