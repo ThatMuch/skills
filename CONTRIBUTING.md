@@ -9,6 +9,7 @@ Les catégories actuelles :
 | Dossier | Contenu |
 | --- | --- |
 | `skills/marketing/` | contenu, SEO, analytics, réseaux, édition |
+| `skills/design/` | design systems et présentations interactives |
 | `skills/video/` | montage et déclinaisons vidéo |
 | `skills/ai/` | méthodes qui font travailler des modèles |
 | `skills/admin/` | tâches d'organisation interne |
