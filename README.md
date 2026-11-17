@@ -16,6 +16,21 @@ skills/
 │   ├── experteam-design/
 │   ├── pptx-vers-presentation-interactive/
 │   └── protocole-design-jobs/
+├── dev/
+│   ├── antigravity-rules/
+│   ├── developing-genkit-dart/
+│   ├── developing-genkit-go/
+│   ├── developing-genkit-js/
+│   ├── developing-genkit-python/
+│   ├── firebase-ai-logic/
+│   ├── firebase-app-hosting-basics/
+│   ├── firebase-auth-basics/
+│   ├── firebase-basics/
+│   ├── firebase-data-connect/
+│   ├── firebase-firestore-enterprise-native-mode/
+│   ├── firebase-firestore-standard/
+│   ├── firebase-hosting-basics/
+│   └── firestore-security-rules-auditor/
 ├── marketing/
 │   ├── ai-seo/             # + evals/, references/
 │   ├── analytics/          # + references/, evals/
@@ -48,6 +63,20 @@ Une catégorie regroupe les skills. Le dossier que l'agent charge est celui du s
 | [experteam-design](skills/design/experteam-design/SKILL.md) | design | Design system Experteam (by everience) pour créer des sites, landing pages et présentations interactives HTML. À utiliser dès que… |
 | [pptx-vers-presentation-interactive](skills/design/pptx-vers-presentation-interactive/SKILL.md) | design | Transforme un PowerPoint (.pptx) en présentation web interactive (HTML publiée en Artifact), en gardant le contenu d'origine et en… |
 | [protocole-design-jobs](skills/design/protocole-design-jobs/SKILL.md) | design | Protocole de design "Steve Jobs" : audit simplicité et émotion, note sur 10 et punchline avant toute proposition d'interface, d'écran, de… |
+| [antigravity-rules](skills/dev/antigravity-rules/SKILL.md) | dev | Règles de l'Agent Antigravity - Stack React 19 + Zustand, including Linus Torvalds code quality and Steve Jobs design protocols. |
+| [developing-genkit-dart](skills/dev/developing-genkit-dart/SKILL.md) | dev | Generates code and provides documentation for the Genkit Dart SDK. Use when the user asks to build AI agents in Dart, use Genkit flows, or integrate LLMs into D… |
+| [developing-genkit-go](skills/dev/developing-genkit-go/SKILL.md) | dev | Develop AI-powered applications using Genkit in Go. Use when the user asks to build AI features, agents, flows, or tools in Go using Genkit, or when working wit… |
+| [developing-genkit-js](skills/dev/developing-genkit-js/SKILL.md) | dev | Develop AI-powered applications using Genkit in Node.js/TypeScript. Use when the user asks about Genkit, AI agents, flows, or tools in JavaScript/TypeScript, or… |
+| [developing-genkit-python](skills/dev/developing-genkit-python/SKILL.md) | dev | Develop AI-powered applications using Genkit in Python. Use when the user asks about Genkit, AI agents, flows, or tools in Python, or when encountering Genkit e… |
+| [firebase-ai-logic](skills/dev/firebase-ai-logic/SKILL.md) | dev | Official skill for integrating Firebase AI Logic (Gemini API) into web applications. Covers setup, multimodal inference, structured output, and security. |
+| [firebase-app-hosting-basics](skills/dev/firebase-app-hosting-basics/SKILL.md) | dev | Deploy and manage web apps with Firebase App Hosting. Use this skill when deploying Next.js/Angular apps with backends. |
+| [firebase-auth-basics](skills/dev/firebase-auth-basics/SKILL.md) | dev | Guide for setting up and using Firebase Authentication. Use this skill when the user's app requires user sign-in, user management, or secure data access using a… |
+| [firebase-basics](skills/dev/firebase-basics/SKILL.md) | dev | Provides foundational setup, authentication, and project management workflows for Firebase using the Firebase CLI. Use when checking Firebase CLI version… |
+| [firebase-data-connect](skills/dev/firebase-data-connect/SKILL.md) | dev | Build and deploy Firebase SQL Connect (aka Firebase Data Connect) backends with PostgreSQL. Use for schema design, GraphQL queries/mutations, authorization, and… |
+| [firebase-firestore-enterprise-native-mode](skills/dev/firebase-firestore-enterprise-native-mode/SKILL.md) | dev | Comprehensive guide for Firestore enterprise native including provisioning, data model, security rules, and SDK usage. Use this skill when the user needs help s… |
+| [firebase-firestore-standard](skills/dev/firebase-firestore-standard/SKILL.md) | dev | Comprehensive guide for Firestore Standard Edition, including provisioning, security rules, and SDK usage. Use this skill when the user needs help setting up Fi… |
+| [firebase-hosting-basics](skills/dev/firebase-hosting-basics/SKILL.md) | dev | Skill for working with Firebase Hosting (Classic). Use this when you want to deploy static web apps, Single Page Apps (SPAs), or simple microservices. Do NOT us… |
+| [firestore-security-rules-auditor](skills/dev/firestore-security-rules-auditor/SKILL.md) | dev | A skill to evaluate how secure Firestore security rules are. Use this when Firestore security rules are updated to ensure that the generated rules are extremely… |
 | [ai-seo](skills/marketing/ai-seo/SKILL.md) | marketing | When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers. Also use when the… |
 | [analytics](skills/marketing/analytics/SKILL.md) | marketing | When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions "set up tracking,"… |
 | [cold-email](skills/marketing/cold-email/SKILL.md) | marketing | Write B2B cold emails and follow-up sequences that get replies. Use when the user wants to write cold outreach emails, prospecting emails,… |
