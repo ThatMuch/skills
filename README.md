@@ -14,7 +14,8 @@ skills/
 │   └── llm-council/
 ├── design/
 │   ├── experteam-design/
-│   └── pptx-vers-presentation-interactive/
+│   ├── pptx-vers-presentation-interactive/
+│   └── protocole-design-jobs/
 ├── marketing/
 │   ├── ai-seo/             # + evals/, references/
 │   ├── analytics/          # + references/, evals/
@@ -46,6 +47,7 @@ Une catégorie regroupe les skills. Le dossier que l'agent charge est celui du s
 | [llm-council](skills/ai/llm-council/SKILL.md) | ai | When the user wants several LLMs' opinions on a question, a decision cross-checked by a 'council' of models, or asks to run the LLM… |
 | [experteam-design](skills/design/experteam-design/SKILL.md) | design | Design system Experteam (by everience) pour créer des sites, landing pages et présentations interactives HTML. À utiliser dès que… |
 | [pptx-vers-presentation-interactive](skills/design/pptx-vers-presentation-interactive/SKILL.md) | design | Transforme un PowerPoint (.pptx) en présentation web interactive (HTML publiée en Artifact), en gardant le contenu d'origine et en… |
+| [protocole-design-jobs](skills/design/protocole-design-jobs/SKILL.md) | design | Protocole de design "Steve Jobs" : audit simplicité et émotion, note sur 10 et punchline avant toute proposition d'interface, d'écran, de… |
 | [ai-seo](skills/marketing/ai-seo/SKILL.md) | marketing | When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers. Also use when the… |
 | [analytics](skills/marketing/analytics/SKILL.md) | marketing | When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions "set up tracking,"… |
 | [cold-email](skills/marketing/cold-email/SKILL.md) | marketing | Write B2B cold emails and follow-up sequences that get replies. Use when the user wants to write cold outreach emails, prospecting emails,… |
