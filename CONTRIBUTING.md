@@ -11,11 +11,14 @@ Les catégories actuelles :
 | `skills/marketing/` | stratégie produit, mesure, e-mailing, réseaux sociaux |
 | `skills/seo/` | référencement naturel : audit, pages à grande échelle, visibilité dans les IA |
 | `skills/redaction/` | écriture d'articles et de posts (blog, newsletter) |
-| `skills/design/` | méthodes et protocoles de design, présentations interactives (valables pour toute charte) |
+| `skills/design/` | méthodes et outils de design, présentations interactives (valables pour toute charte) |
+| `skills/figma/` | design et code autour de Figma (MCP Figma, Code Connect, design system) |
+| `skills/documents/` | création et édition de Word, PDF, PowerPoint, Excel, Google Workspace |
+| `skills/agents/` | outils pour travailler avec les agents : écrire des skills, entretenir `CLAUDE.md` |
 | `skills/video/` | script, montage et déclinaisons vidéo |
-| `skills/ai/` | modèles, agents et SDK d'IA (Genkit, LLM Council) |
+| `skills/ai/` | modèles, agents, SDK d'IA et recherche (Genkit, LLM Council, deep-research) |
 | `skills/firebase/` | plateforme Firebase : CLI, auth, Firestore, hosting, Data Connect, AI Logic |
-| `skills/dev/` | règles et conventions de code |
+| `skills/dev/` | règles, conventions et bonnes pratiques de code |
 | `skills/experteam/` | tout ce qui est propre à Experteam (charte, note de frais, outils internes) : à mettre ici plutôt que dans une catégorie générale |
 
 S'il en faut une nouvelle, créer `skills/<categorie>/` avec un slug en kebab-case (minuscules, chiffres, tirets). Une catégorie = un regroupement, pas une skill.

@@ -8,21 +8,55 @@ Les instructions d'origine sont conservées. Les noms de dossier sont en kebab-c
 
 ```
 skills/
-├── ai/                     # modèles, agents et SDK d'IA
+├── agents/               # outils pour travailler avec les agents (skills, CLAUDE.md)
+│   ├── claude-md-improver/
+│   ├── find-skills/
+│   └── skill-creator/
+├── ai/                   # modèles, agents, SDK d'IA et recherche
+│   ├── deep-research/
 │   ├── developing-genkit-dart/
 │   ├── developing-genkit-go/
 │   ├── developing-genkit-js/
 │   ├── developing-genkit-python/
 │   └── llm-council/
-├── design/                 # méthode et protocoles de design (génériques)
+├── design/               # méthodes et outils de design, génériques
+│   ├── canvas-design/
+│   ├── frontend-design/
 │   ├── pptx-vers-presentation-interactive/
 │   └── protocole-design-jobs/
-├── dev/                    # règles et conventions de code
-│   └── antigravity-rules/
-├── experteam/              # spécifique Experteam, mis de côté
+├── dev/                  # règles, conventions et bonnes pratiques de code
+│   ├── antigravity-rules/
+│   └── vercel-react-best-practices/
+├── documents/            # Word, PDF, PowerPoint, Excel, Google Workspace
+│   ├── docx/
+│   ├── google-workspace/
+│   ├── pdf/
+│   ├── pptx/
+│   └── xlsx/
+├── experteam/            # spécifique Experteam, mis de côté
 │   ├── experteam-design/
 │   └── sx-note-de-frais-ligne/   # note de frais Everwin SX
-├── firebase/               # plateforme Firebase
+├── figma/                # design et code autour de Figma
+│   ├── figma-3d-transforms/
+│   ├── figma-code-connect/
+│   ├── figma-code-workflows/
+│   ├── figma-create-design-system-rules/
+│   ├── figma-create-new-file/
+│   ├── figma-design-to-code/
+│   ├── figma-generate-design/
+│   ├── figma-generate-diagram/
+│   ├── figma-generate-library/
+│   ├── figma-generative-plugins/
+│   ├── figma-implement-design/
+│   ├── figma-implement-motion/
+│   ├── figma-shaders/
+│   ├── figma-spec/
+│   ├── figma-swiftui/
+│   ├── figma-use/
+│   ├── figma-use-figjam/
+│   ├── figma-use-motion/
+│   └── figma-use-slides/
+├── firebase/             # plateforme Firebase
 │   ├── firebase-ai-logic/
 │   ├── firebase-app-hosting-basics/
 │   ├── firebase-auth-basics/
@@ -32,24 +66,24 @@ skills/
 │   ├── firebase-firestore-standard/
 │   ├── firebase-hosting-basics/
 │   └── firestore-security-rules-auditor/
-├── marketing/              # stratégie, mesure, e-mailing, réseaux
-│   ├── analytics/          # + references/, evals/
-│   ├── cold-email/         # + evals/, references/
-│   ├── emails/             # + evals/, references/
-│   ├── product-marketing/  # + evals/
+├── marketing/            # stratégie, mesure, e-mailing, réseaux
+│   ├── analytics/                # + references/, evals/
+│   ├── cold-email/               # + evals/, references/
+│   ├── emails/                   # + evals/, references/
+│   ├── product-marketing/        # + evals/
 │   └── social/
-├── redaction/              # écriture d'articles et de posts
+├── redaction/            # écriture d'articles et de posts
 │   ├── ma-banque-pro-articles/
 │   └── substack-editor/
-├── seo/                    # référencement naturel et IA
-│   ├── ai-seo/             # + evals/, references/
-│   ├── programmatic-seo/   # + evals/, references/
-│   └── seo-audit/          # + references/, evals/
-└── video/                  # production et montage vidéo
-    ├── montage-vlog/       # + retours.md (exemple), voyages/exemple/
+├── seo/                  # référencement naturel et IA
+│   ├── ai-seo/                   # + evals/, references/
+│   ├── programmatic-seo/         # + evals/, references/
+│   └── seo-audit/                # + references/, evals/
+└── video/                # production et montage vidéo
+    ├── montage-vlog/             # + retours.md (exemple), voyages/exemple/
     ├── podcast-to-vertical-shorts/
     ├── prompteur-script/
-    └── video/              # + evals/, references/
+    └── video/                    # + evals/, references/
 templates/SKILL.template.md
 scripts/validate_skills.py
 ```
@@ -63,16 +97,47 @@ Une catégorie regroupe les skills par thème. Le dossier que l'agent charge est
 <!-- skills-index:start -->
 | Skill | Catégorie | Description |
 | --- | --- | --- |
+| [claude-md-improver](skills/agents/claude-md-improver/SKILL.md) | agents | Audit and improve CLAUDE.md files in repositories. Use when user asks to check, audit, update, improve, or fix CLAUDE.md files. Scans for… |
+| [find-skills](skills/agents/find-skills/SKILL.md) | agents | Helps users discover and install agent skills when they ask questions like "how do I do X", "find a skill for X", "is there a skill that… |
+| [skill-creator](skills/agents/skill-creator/SKILL.md) | agents | Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch,… |
+| [deep-research](skills/ai/deep-research/SKILL.md) | ai | Use this skill when the user's prompt requires (1) researching a topic across multiple sources, comparing options or alternatives,… |
 | [developing-genkit-dart](skills/ai/developing-genkit-dart/SKILL.md) | ai | Generates code and provides documentation for the Genkit Dart SDK. Use when the user asks to build AI agents in Dart, use Genkit flows, or… |
 | [developing-genkit-go](skills/ai/developing-genkit-go/SKILL.md) | ai | Develop AI-powered applications using Genkit in Go. Use when the user asks to build AI features, agents, flows, or tools in Go using… |
 | [developing-genkit-js](skills/ai/developing-genkit-js/SKILL.md) | ai | Develop AI-powered applications using Genkit in Node.js/TypeScript. Use when the user asks about Genkit, AI agents, flows, or tools in… |
 | [developing-genkit-python](skills/ai/developing-genkit-python/SKILL.md) | ai | Develop AI-powered applications using Genkit in Python. Use when the user asks about Genkit, AI agents, flows, or tools in Python, or when… |
 | [llm-council](skills/ai/llm-council/SKILL.md) | ai | When the user wants several LLMs' opinions on a question, a decision cross-checked by a 'council' of models, or asks to run the LLM… |
+| [canvas-design](skills/design/canvas-design/SKILL.md) | design | Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a… |
+| [frontend-design](skills/design/frontend-design/SKILL.md) | design | Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one. Helps with aesthetic direction,… |
 | [pptx-vers-presentation-interactive](skills/design/pptx-vers-presentation-interactive/SKILL.md) | design | Transforme un PowerPoint (.pptx) en présentation web interactive (HTML publiée en Artifact), en gardant le contenu d'origine et en… |
 | [protocole-design-jobs](skills/design/protocole-design-jobs/SKILL.md) | design | Protocole de design "Steve Jobs" : audit simplicité et émotion, note sur 10 et punchline avant toute proposition d'interface, d'écran, de… |
 | [antigravity-rules](skills/dev/antigravity-rules/SKILL.md) | dev | Règles de l'Agent Antigravity - Stack React 19 + Zustand, including Linus Torvalds code quality and Steve Jobs design protocols. |
+| [vercel-react-best-practices](skills/dev/vercel-react-best-practices/SKILL.md) | dev | React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or… |
+| [docx](skills/documents/docx/SKILL.md) | documents | Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx) or Word templates (.dotx). Triggers… |
+| [google-workspace](skills/documents/google-workspace/SKILL.md) | documents | Read this before the first Google Drive, Docs, Sheets or Slides connector call whenever the task creates or changes a Google file. Use… |
+| [pdf](skills/documents/pdf/SKILL.md) | documents | Use this skill whenever the user wants to do anything with PDF files. This includes reading or extracting text/tables from PDFs, combining… |
+| [pptx](skills/documents/pptx/SKILL.md) | documents | Use this skill any time a .pptx or .potx file is involved in any way — as input, output, or both. This includes: creating slide decks,… |
+| [xlsx](skills/documents/xlsx/SKILL.md) | documents | Use this skill any time a spreadsheet file is the primary input or output. This means any task where the user wants to: open, read, edit,… |
 | [experteam-design](skills/experteam/experteam-design/SKILL.md) | experteam | Design system Experteam (by everience) pour créer des sites, landing pages et présentations interactives HTML. À utiliser dès que… |
 | [sx-note-de-frais-ligne](skills/experteam/sx-note-de-frais-ligne/SKILL.md) | experteam | Ajouter une ligne de frais (train, taxi, hôtel, repas) avec justificatif dans la note de frais Everwin SX de l'organisation. |
+| [figma-3d-transforms](skills/figma/figma-3d-transforms/SKILL.md) | figma | Add or edit 3D transforms — depth, perspective, z-axis rotation, tilt, isometric, and parallax looks that flat 2D rotation cannot express.… |
+| [figma-code-connect](skills/figma/figma-code-connect/SKILL.md) | figma | Creates and maintains Figma Code Connect template files that map Figma components to code snippets. Use when the user mentions Code… |
+| [figma-code-workflows](skills/figma/figma-code-workflows/SKILL.md) | figma | Import or upload local HTML or project files into Figma, choose editable Design frames, runnable Code Layers or standalone Code (also… |
+| [figma-create-design-system-rules](skills/figma/figma-create-design-system-rules/SKILL.md) | figma | Generates custom design system rules for the user's codebase. Use when user says "create design system rules", "generate rules for my… |
+| [figma-create-new-file](skills/figma/figma-create-new-file/SKILL.md) | figma | Always use this skill when the user wants to create a new Figma Design, FigJam, or Slides file. You MUST invoke this skill BEFORE every… |
+| [figma-design-to-code](skills/figma/figma-design-to-code/SKILL.md) | figma | **MANDATORY prerequisite** — you MUST invoke this skill BEFORE calling the `get_design_context` Figma MCP tool. You MUST trigger this… |
+| [figma-generate-design](skills/figma/figma-generate-design/SKILL.md) | figma | Use this skill alongside figma-use when the task involves translating an application page, view, or multi-section layout into Figma.… |
+| [figma-generate-diagram](skills/figma/figma-generate-diagram/SKILL.md) | figma | MANDATORY prerequisite — load this skill BEFORE every `generate_diagram` tool call. NEVER call `generate_diagram` directly without loading… |
+| [figma-generate-library](skills/figma/figma-generate-library/SKILL.md) | figma | Build or update a professional-grade design system in Figma from a codebase. Use when the user wants to create variables/tokens, build… |
+| [figma-generative-plugins](skills/figma/figma-generative-plugins/SKILL.md) | figma | **MANDATORY prerequisite** — load this skill before calling `create_generative_plugin` or `update_generative_plugin`. Use when the user… |
+| [figma-implement-design](skills/figma/figma-implement-design/SKILL.md) | figma | Translates Figma designs into production-ready application code with 1:1 visual fidelity. Use when implementing UI code from Figma files,… |
+| [figma-implement-motion](skills/figma/figma-implement-motion/SKILL.md) | figma | Translates Figma motion and animations into production-ready application code. Use when implementing animation/motion from a Figma design… |
+| [figma-shaders](skills/figma/figma-shaders/SKILL.md) | figma | **MANDATORY prerequisite** — load this skill before calling `create_shader` or `update_shader`. Use when the user asks to create, author,… |
+| [figma-spec](skills/figma/figma-spec/SKILL.md) | figma | This skill is required to create, read, edit, review, or comment on Figma specs. You must read it when working on a PRD, brief, RFC or any… |
+| [figma-swiftui](skills/figma/figma-swiftui/SKILL.md) | figma | SwiftUI ↔ Figma translation. Use whenever the user mentions Swift, SwiftUI, iOS, iPhone, or iPad — in EITHER direction — translating a… |
+| [figma-use](skills/figma/figma-use/SKILL.md) | figma | **MANDATORY prerequisite** — you MUST invoke this skill BEFORE every `use_figma` tool call. NEVER call `use_figma` directly without… |
+| [figma-use-figjam](skills/figma/figma-use-figjam/SKILL.md) | figma | This skill helps agents use Figma's use_figma MCP tool in the FigJam context. Can be used alongside figma-use which has foundational… |
+| [figma-use-motion](skills/figma/figma-use-motion/SKILL.md) | figma | Motion / animation context for the `use_figma` MCP tool — animating Figma nodes via manual keyframes, animation styles, easing, and… |
+| [figma-use-slides](skills/figma/figma-use-slides/SKILL.md) | figma | This skill helps agents use Figma's use_figma MCP tool in the Slides context. Can be used alongside figma-use which has foundational… |
 | [firebase-ai-logic](skills/firebase/firebase-ai-logic/SKILL.md) | firebase | Official skill for integrating Firebase AI Logic (Gemini API) into web applications. Covers setup, multimodal inference, structured… |
 | [firebase-app-hosting-basics](skills/firebase/firebase-app-hosting-basics/SKILL.md) | firebase | Deploy and manage web apps with Firebase App Hosting. Use this skill when deploying Next.js/Angular apps with backends. |
 | [firebase-auth-basics](skills/firebase/firebase-auth-basics/SKILL.md) | firebase | Guide for setting up and using Firebase Authentication. Use this skill when the user's app requires user sign-in, user management, or… |

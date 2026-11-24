@@ -156,6 +156,9 @@ def scan_secrets() -> list[str]:
     for path in files:
         if path.suffix.lower() not in SCAN_SUFFIXES and path.name not in {"README.md", "NOTICE.md"}:
             continue
+        # Textes de licence tiers (LICENSE.txt, polices OFL) : adresses d'auteurs publiques, à ne pas modifier.
+        if path.name.upper().startswith("LICENSE") or path.stem.upper().endswith("-OFL"):
+            continue
         text = path.read_text(encoding="utf-8", errors="replace")
         relative = path.relative_to(ROOT)
         for match in EMAIL_RE.finditer(text):
