@@ -33,4 +33,12 @@ Copiées telles quelles depuis les skills utilisées au quotidien dans Claude et
 
 Non reprises : `built-in-browser`, `chrome-browser` et `computer-use` (« All rights reserved » Anthropic), ainsi que `docs`, `morning` et `import-memory`, qui dépendent de fonctions propres à l'application Claude.
 
+## Skills reprises des autres projets de l'équipe
+
+Copiées depuis des dossiers `.claude/skills/`, `.agent/skills/` ou `.agents/skills/` de projets existants. Les skills propres à un projet (conventions d'un seul dépôt) n'ont pas été reprises.
+
+- **MIT** : `git-commit` (déclaré dans son frontmatter), `supabase-postgres-best-practices` (Supabase), `wordpress-pro` (Jeffallan).
+- **Apache 2.0** : `react-19` (auteur indiqué : gentleman-programming).
+- **Licence non identifiée dans les fichiers importés** : `supabase` (publiée par Supabase dans `supabase/agent-skills`), `wordpress-themes`, `linear` (écrite pour Codex, source amont non confirmée), `release-publisher` et `review`. `review` n'avait pas de frontmatter : `name` et `description` ont été ajoutés, le corps est inchangé.
+
 Tant que l'équipe n'a pas choisi une licence pour l'ensemble, ne pas considérer le dépôt comme réutilisable au-delà de THATMUCH, sauf les extraits MIT ci-dessus, qui restent sous MIT.

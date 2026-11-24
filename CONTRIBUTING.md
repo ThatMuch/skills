@@ -18,7 +18,11 @@ Les catégories actuelles :
 | `skills/video/` | script, montage et déclinaisons vidéo |
 | `skills/ai/` | modèles, agents, SDK d'IA et recherche (Genkit, LLM Council, deep-research) |
 | `skills/firebase/` | plateforme Firebase : CLI, auth, Firestore, hosting, Data Connect, AI Logic |
-| `skills/dev/` | règles, conventions et bonnes pratiques de code |
+| `skills/dev/` | règles, conventions et bonnes pratiques de code (React, revue de code) |
+| `skills/git/` | commits conventionnels et publication de versions (Git flow, SemVer) |
+| `skills/projet/` | gestion de projet et tickets (Linear) |
+| `skills/supabase/` | base de données et backend Supabase, bonnes pratiques Postgres |
+| `skills/wordpress/` | thèmes, plugins et blocs WordPress |
 | `skills/experteam/` | tout ce qui est propre à Experteam (charte, note de frais, outils internes) : à mettre ici plutôt que dans une catégorie générale |
 
 S'il en faut une nouvelle, créer `skills/<categorie>/` avec un slug en kebab-case (minuscules, chiffres, tirets). Une catégorie = un regroupement, pas une skill.

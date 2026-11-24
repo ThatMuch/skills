@@ -8,35 +8,37 @@ Les instructions d'origine sont conservées. Les noms de dossier sont en kebab-c
 
 ```
 skills/
-├── agents/               # outils pour travailler avec les agents (skills, CLAUDE.md)
+├── agents/           # outils pour travailler avec les agents (skills, CLAUDE.md)
 │   ├── claude-md-improver/
 │   ├── find-skills/
 │   └── skill-creator/
-├── ai/                   # modèles, agents, SDK d'IA et recherche
+├── ai/               # modèles, agents, SDK d'IA et recherche
 │   ├── deep-research/
 │   ├── developing-genkit-dart/
 │   ├── developing-genkit-go/
 │   ├── developing-genkit-js/
 │   ├── developing-genkit-python/
 │   └── llm-council/
-├── design/               # méthodes et outils de design, génériques
+├── design/           # méthodes et outils de design, génériques
 │   ├── canvas-design/
 │   ├── frontend-design/
 │   ├── pptx-vers-presentation-interactive/
 │   └── protocole-design-jobs/
-├── dev/                  # règles, conventions et bonnes pratiques de code
+├── dev/              # règles, conventions et bonnes pratiques de code
 │   ├── antigravity-rules/
+│   ├── react-19/
+│   ├── review/
 │   └── vercel-react-best-practices/
-├── documents/            # Word, PDF, PowerPoint, Excel, Google Workspace
+├── documents/        # Word, PDF, PowerPoint, Excel, Google Workspace
 │   ├── docx/
 │   ├── google-workspace/
 │   ├── pdf/
 │   ├── pptx/
 │   └── xlsx/
-├── experteam/            # spécifique Experteam, mis de côté
+├── experteam/        # spécifique Experteam, mis de côté
 │   ├── experteam-design/
 │   └── sx-note-de-frais-ligne/   # note de frais Everwin SX
-├── figma/                # design et code autour de Figma
+├── figma/            # design et code autour de Figma
 │   ├── figma-3d-transforms/
 │   ├── figma-code-connect/
 │   ├── figma-code-workflows/
@@ -56,7 +58,7 @@ skills/
 │   ├── figma-use-figjam/
 │   ├── figma-use-motion/
 │   └── figma-use-slides/
-├── firebase/             # plateforme Firebase
+├── firebase/         # plateforme Firebase
 │   ├── firebase-ai-logic/
 │   ├── firebase-app-hosting-basics/
 │   ├── firebase-auth-basics/
@@ -66,24 +68,35 @@ skills/
 │   ├── firebase-firestore-standard/
 │   ├── firebase-hosting-basics/
 │   └── firestore-security-rules-auditor/
-├── marketing/            # stratégie, mesure, e-mailing, réseaux
+├── git/              # commits et publication de versions
+│   ├── git-commit/
+│   └── release-publisher/
+├── marketing/        # stratégie, mesure, e-mailing, réseaux
 │   ├── analytics/                # + references/, evals/
 │   ├── cold-email/               # + evals/, references/
 │   ├── emails/                   # + evals/, references/
 │   ├── product-marketing/        # + evals/
 │   └── social/
-├── redaction/            # écriture d'articles et de posts
+├── projet/           # gestion de projet et tickets
+│   └── linear/
+├── redaction/        # écriture d'articles et de posts
 │   ├── ma-banque-pro-articles/
 │   └── substack-editor/
-├── seo/                  # référencement naturel et IA
+├── seo/              # référencement naturel et IA
 │   ├── ai-seo/                   # + evals/, references/
 │   ├── programmatic-seo/         # + evals/, references/
 │   └── seo-audit/                # + references/, evals/
-└── video/                # production et montage vidéo
-    ├── montage-vlog/             # + retours.md (exemple), voyages/exemple/
-    ├── podcast-to-vertical-shorts/
-    ├── prompteur-script/
-    └── video/                    # + evals/, references/
+├── supabase/         # base de données et backend Supabase
+│   ├── supabase/
+│   └── supabase-postgres-best-practices/
+├── video/            # production et montage vidéo
+│   ├── montage-vlog/             # + retours.md (exemple), voyages/exemple/
+│   ├── podcast-to-vertical-shorts/
+│   ├── prompteur-script/
+│   └── video/                    # + evals/, references/
+└── wordpress/        # thèmes et plugins WordPress
+    ├── wordpress-pro/
+    └── wordpress-themes/
 templates/SKILL.template.md
 scripts/validate_skills.py
 ```
@@ -111,6 +124,8 @@ Une catégorie regroupe les skills par thème. Le dossier que l'agent charge est
 | [pptx-vers-presentation-interactive](skills/design/pptx-vers-presentation-interactive/SKILL.md) | design | Transforme un PowerPoint (.pptx) en présentation web interactive (HTML publiée en Artifact), en gardant le contenu d'origine et en… |
 | [protocole-design-jobs](skills/design/protocole-design-jobs/SKILL.md) | design | Protocole de design "Steve Jobs" : audit simplicité et émotion, note sur 10 et punchline avant toute proposition d'interface, d'écran, de… |
 | [antigravity-rules](skills/dev/antigravity-rules/SKILL.md) | dev | Règles de l'Agent Antigravity - Stack React 19 + Zustand, including Linus Torvalds code quality and Steve Jobs design protocols. |
+| [react-19](skills/dev/react-19/SKILL.md) | dev | React 19 patterns with React Compiler. Trigger: When writing React components - no useMemo/useCallback needed. |
+| [review](skills/dev/review/SKILL.md) | dev | Revue de code critique et pragmatique, dans l'esprit de Linus Torvalds : structures de données, complexité, risque de rupture, sécurité,… |
 | [vercel-react-best-practices](skills/dev/vercel-react-best-practices/SKILL.md) | dev | React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or… |
 | [docx](skills/documents/docx/SKILL.md) | documents | Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx) or Word templates (.dotx). Triggers… |
 | [google-workspace](skills/documents/google-workspace/SKILL.md) | documents | Read this before the first Google Drive, Docs, Sheets or Slides connector call whenever the task creates or changes a Google file. Use… |
@@ -147,20 +162,27 @@ Une catégorie regroupe les skills par thème. Le dossier que l'agent charge est
 | [firebase-firestore-standard](skills/firebase/firebase-firestore-standard/SKILL.md) | firebase | Comprehensive guide for Firestore Standard Edition, including provisioning, security rules, and SDK usage. Use this skill when the user… |
 | [firebase-hosting-basics](skills/firebase/firebase-hosting-basics/SKILL.md) | firebase | Skill for working with Firebase Hosting (Classic). Use this when you want to deploy static web apps, Single Page Apps (SPAs), or simple… |
 | [firestore-security-rules-auditor](skills/firebase/firestore-security-rules-auditor/SKILL.md) | firebase | A skill to evaluate how secure Firestore security rules are. Use this when Firestore security rules are updated to ensure that the… |
+| [git-commit](skills/git/git-commit/SKILL.md) | git | Execute git commit with conventional commit message analysis, intelligent staging, and message generation. Use when user asks to commit… |
+| [release-publisher](skills/git/release-publisher/SKILL.md) | git | Guides publishing release versions of the application using Git flow and Semantic Versioning. Triggers on requests like "publie la… |
 | [analytics](skills/marketing/analytics/SKILL.md) | marketing | When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions "set up tracking,"… |
 | [cold-email](skills/marketing/cold-email/SKILL.md) | marketing | Write B2B cold emails and follow-up sequences that get replies. Use when the user wants to write cold outreach emails, prospecting emails,… |
 | [emails](skills/marketing/emails/SKILL.md) | marketing | When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program. Also use… |
 | [product-marketing](skills/marketing/product-marketing/SKILL.md) | marketing | When the user wants to create or update their product marketing context document. Also use when the user mentions 'product context,'… |
 | [social](skills/marketing/social/SKILL.md) | marketing | When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram, TikTok, or Facebook,… |
+| [linear](skills/projet/linear/SKILL.md) | projet | Manage issues, projects & team workflows in Linear. Use when the user wants to read, create or updates tickets in Linear. |
 | [ma-banque-pro-articles](skills/redaction/ma-banque-pro-articles/SKILL.md) | redaction | Rédige des articles de blog SEO pour ma-banque.pro, comparateur de banques professionnelles et néobanques. Utilise ce skill dès que… |
 | [substack-editor](skills/redaction/substack-editor/SKILL.md) | redaction | Use when turning a topic or a finished text into a Substack post ready to paste, or when putting an article into the Substack editor as a… |
 | [ai-seo](skills/seo/ai-seo/SKILL.md) | seo | When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers. Also use when the… |
 | [programmatic-seo](skills/seo/programmatic-seo/SKILL.md) | seo | When the user wants to create SEO-driven pages at scale using templates and data. Also use when the user mentions "programmatic SEO,"… |
 | [seo-audit](skills/seo/seo-audit/SKILL.md) | seo | When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions "SEO audit," "technical SEO,"… |
+| [supabase](skills/supabase/supabase/SKILL.md) | supabase | Use when doing ANY task involving Supabase. Triggers: Supabase products (Database, Auth, Edge Functions, Realtime, Storage, Vectors, Cron,… |
+| [supabase-postgres-best-practices](skills/supabase/supabase-postgres-best-practices/SKILL.md) | supabase | Postgres best practices maintained by Supabase, for Postgres running anywhere. Load this skill BEFORE writing or changing anything that… |
 | [montage-vlog](skills/video/montage-vlog/SKILL.md) | video | À utiliser pour monter un vlog de voyage à partir de rushs bruts (DJI, iPhone, GoPro), d'une journée test jusqu'au film complet. |
 | [podcast-to-vertical-shorts](skills/video/podcast-to-vertical-shorts/SKILL.md) | video | When cutting a long podcast or interview video (e.g. YouTube) into viral vertical shorts for TikTok, Reels or YouTube Shorts. |
 | [prompteur-script](skills/video/prompteur-script/SKILL.md) | video | Génère un script de prompteur pour vidéos YouTube/réseaux sociaux, à partir de notes/un brouillon existant, d'un simple sujet (une phrase,… |
 | [video](skills/video/video/SKILL.md) | video | When the user wants to create, generate, or produce video content using AI tools or programmatic frameworks. Also use when the user… |
+| [wordpress-pro](skills/wordpress/wordpress-pro/SKILL.md) | wordpress | Develops custom WordPress themes and plugins, creates and registers Gutenberg blocks and block patterns, configures WooCommerce stores,… |
+| [wordpress-themes](skills/wordpress/wordpress-themes/SKILL.md) | wordpress | WordPress custom theme development specialist focused on clean, maintainable code following VIP standards. Includes modular theme… |
 <!-- skills-index:end -->
 
 L'index est produit par `python3 scripts/validate_skills.py --write-index`. La description est le début du champ `description` (en français ou en anglais, selon la skill).

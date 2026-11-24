@@ -29,6 +29,7 @@ INDEX_END = "<!-- skills-index:end -->"
 
 NAME_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 EMAIL_RE = re.compile(r"[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}")
+EXAMPLE_DOMAIN_RE = re.compile(r"@(?:[A-Za-z0-9-]+\.)*example\.(?:com|org|net)$", re.IGNORECASE)
 SECRET_RE = re.compile(
     r"(?<![A-Za-z0-9])("
     r"sk-[A-Za-z0-9]{8,}|ghp_[A-Za-z0-9]{20,}|gho_[A-Za-z0-9]{20,}"
@@ -162,6 +163,8 @@ def scan_secrets() -> list[str]:
         text = path.read_text(encoding="utf-8", errors="replace")
         relative = path.relative_to(ROOT)
         for match in EMAIL_RE.finditer(text):
+            if EXAMPLE_DOMAIN_RE.search(match.group(0)):
+                continue  # adresse d'exemple réservée (RFC 2606), pas une donnée personnelle
             errors.append(f"{relative}: adresse e-mail ({match.group(0)})")
         for match in SECRET_RE.finditer(text):
             errors.append(f"{relative}: secret potentiel ({match.group(0)[:8]}…)")
