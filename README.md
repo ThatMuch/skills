@@ -199,6 +199,31 @@ Un bot Cursor (y compris un Grok Bot) consomme les skills au même format : un d
 
 Le bot choisit une skill d'après `name` et `description`. On ne met dans ses instructions versionnées ni clé, ni e-mail, ni chemin de machine : ces réglages vont dans la mémoire du bot ou dans ses variables d'environnement. Le détail par skill est dans la section suivante, et dans le `## À personnaliser` des skills concernées.
 
+## Ajouter une skill pour tous les agents
+
+Une skill ajoutée ici est utilisable par Claude Code, Cursor, Codex, un Grok Bot ou tout autre agent : le format ne dépend pas de l'agent. La marche à suivre est la même pour une personne et pour un agent. Le détail est dans [CONTRIBUTING.md](CONTRIBUTING.md).
+
+1. **Choisir la catégorie** dans l'[arborescence](#arborescence). Une skill propre à Experteam va dans `skills/experteam/`. Sinon, créer `skills/<categorie>/` en kebab-case.
+2. **Créer le dossier** `skills/<categorie>/<slug>/SKILL.md` à partir de [templates/SKILL.template.md](templates/SKILL.template.md). Le slug est identique au champ `name` du frontmatter. `description` dit quand utiliser la skill (sous 1024 caractères) : c'est elle que l'agent lit pour choisir.
+3. **Garder les fichiers d'aide à côté** (`references/`, `evals/`, scripts), avec des liens relatifs.
+4. **Partir d'une skill déjà installée chez soi** (`~/.claude/skills/`, `.cursor/skills/`, `.agents/skills/`) : copier le dossier entier, puis retirer e-mails, clés, chemins de machine et noms de personnes. Les remplacer par des placeholders (`<VOTRE_EMAIL_PERSO>`) avec une section `## À personnaliser`, et ajouter une ligne au tableau [Réglages personnels](#réglages-personnels).
+5. **Noter la provenance** dans [NOTICE.md](NOTICE.md) si la skill vient d'ailleurs : source, licence, ou « licence non identifiée ». Ne pas copier une skill marquée « All rights reserved ».
+6. **Mettre à jour l'index et vérifier** :
+
+   ```bash
+   pip install pyyaml
+   python3 scripts/validate_skills.py --write-index
+   python3 scripts/validate_skills.py
+   ```
+
+7. **Ouvrir une pull request** : une branche, un message de commit qui nomme la skill, et dans la description sa catégorie et ses placeholders.
+
+À donner tel quel à un agent :
+
+> Ajoute la skill `<slug>` dans `skills/<categorie>/` de ce dépôt en suivant la section « Ajouter une skill pour tous les agents » du README et CONTRIBUTING.md. Pars de `templates/SKILL.template.md`, ne mets aucune donnée personnelle, lance `python3 scripts/validate_skills.py --write-index` puis `python3 scripts/validate_skills.py`, et prépare la pull request sans la fusionner.
+
+Pour qu'un autre agent utilise ensuite la skill, voir [Installer et utiliser](#installer-et-utiliser).
+
 ## Réglages personnels
 
 Certaines skills ont besoin d'une valeur que seule la personne connaît. Cette valeur se range dans la **mémoire ou la config locale de l'agent**, jamais dans un commit. Le dépôt ne contient que des placeholders (`<VOTRE_EMAIL_PERSO>`, etc.).
