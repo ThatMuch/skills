@@ -8,20 +8,21 @@ Les instructions d'origine sont conservées. Les noms de dossier sont en kebab-c
 
 ```
 skills/
-├── admin/
-│   └── sx-note-de-frais-ligne/
-├── ai/
-│   └── llm-council/
-├── design/
-│   ├── experteam-design/
-│   ├── pptx-vers-presentation-interactive/
-│   └── protocole-design-jobs/
-├── dev/
-│   ├── antigravity-rules/
+├── ai/                     # modèles, agents et SDK d'IA
 │   ├── developing-genkit-dart/
 │   ├── developing-genkit-go/
 │   ├── developing-genkit-js/
 │   ├── developing-genkit-python/
+│   └── llm-council/
+├── design/                 # méthode et protocoles de design (génériques)
+│   ├── pptx-vers-presentation-interactive/
+│   └── protocole-design-jobs/
+├── dev/                    # règles et conventions de code
+│   └── antigravity-rules/
+├── experteam/              # spécifique Experteam, mis de côté
+│   ├── experteam-design/
+│   └── sx-note-de-frais-ligne/   # note de frais Everwin SX
+├── firebase/               # plateforme Firebase
 │   ├── firebase-ai-logic/
 │   ├── firebase-app-hosting-basics/
 │   ├── firebase-auth-basics/
@@ -31,18 +32,20 @@ skills/
 │   ├── firebase-firestore-standard/
 │   ├── firebase-hosting-basics/
 │   └── firestore-security-rules-auditor/
-├── marketing/
-│   ├── ai-seo/             # + evals/, references/
+├── marketing/              # stratégie, mesure, e-mailing, réseaux
 │   ├── analytics/          # + references/, evals/
 │   ├── cold-email/         # + evals/, references/
 │   ├── emails/             # + evals/, references/
-│   ├── ma-banque-pro-articles/
 │   ├── product-marketing/  # + evals/
-│   ├── programmatic-seo/   # + evals/, references/
-│   ├── seo-audit/          # + references/, evals/
-│   ├── social/
+│   └── social/
+├── redaction/              # écriture d'articles et de posts
+│   ├── ma-banque-pro-articles/
 │   └── substack-editor/
-└── video/
+├── seo/                    # référencement naturel et IA
+│   ├── ai-seo/             # + evals/, references/
+│   ├── programmatic-seo/   # + evals/, references/
+│   └── seo-audit/          # + references/, evals/
+└── video/                  # production et montage vidéo
     ├── montage-vlog/       # + retours.md (exemple), voyages/exemple/
     ├── podcast-to-vertical-shorts/
     ├── prompteur-script/
@@ -51,42 +54,44 @@ templates/SKILL.template.md
 scripts/validate_skills.py
 ```
 
-Une catégorie regroupe les skills. Le dossier que l'agent charge est celui du slug (`seo-audit/`), pas la catégorie.
+Une catégorie regroupe les skills par thème. Le dossier que l'agent charge est celui du slug (`seo-audit/`), pas la catégorie.
+
+`experteam/` met à part les skills propres à Experteam (charte, note de frais Everwin SX). Les autres catégories restent utilisables par n'importe qui : on ne lie `experteam/` que pour un travail destiné à Experteam. `pptx-vers-presentation-interactive` reste dans `design/` : sa méthode vaut pour toute charte, et elle ne cite `experteam-design` que comme option de style.
 
 ## Index
 
 <!-- skills-index:start -->
 | Skill | Catégorie | Description |
 | --- | --- | --- |
-| [sx-note-de-frais-ligne](skills/admin/sx-note-de-frais-ligne/SKILL.md) | admin | Ajouter une ligne de frais (train, taxi, hôtel, repas) avec justificatif dans la note de frais Everwin SX de l'organisation. |
+| [developing-genkit-dart](skills/ai/developing-genkit-dart/SKILL.md) | ai | Generates code and provides documentation for the Genkit Dart SDK. Use when the user asks to build AI agents in Dart, use Genkit flows, or… |
+| [developing-genkit-go](skills/ai/developing-genkit-go/SKILL.md) | ai | Develop AI-powered applications using Genkit in Go. Use when the user asks to build AI features, agents, flows, or tools in Go using… |
+| [developing-genkit-js](skills/ai/developing-genkit-js/SKILL.md) | ai | Develop AI-powered applications using Genkit in Node.js/TypeScript. Use when the user asks about Genkit, AI agents, flows, or tools in… |
+| [developing-genkit-python](skills/ai/developing-genkit-python/SKILL.md) | ai | Develop AI-powered applications using Genkit in Python. Use when the user asks about Genkit, AI agents, flows, or tools in Python, or when… |
 | [llm-council](skills/ai/llm-council/SKILL.md) | ai | When the user wants several LLMs' opinions on a question, a decision cross-checked by a 'council' of models, or asks to run the LLM… |
-| [experteam-design](skills/design/experteam-design/SKILL.md) | design | Design system Experteam (by everience) pour créer des sites, landing pages et présentations interactives HTML. À utiliser dès que… |
 | [pptx-vers-presentation-interactive](skills/design/pptx-vers-presentation-interactive/SKILL.md) | design | Transforme un PowerPoint (.pptx) en présentation web interactive (HTML publiée en Artifact), en gardant le contenu d'origine et en… |
 | [protocole-design-jobs](skills/design/protocole-design-jobs/SKILL.md) | design | Protocole de design "Steve Jobs" : audit simplicité et émotion, note sur 10 et punchline avant toute proposition d'interface, d'écran, de… |
 | [antigravity-rules](skills/dev/antigravity-rules/SKILL.md) | dev | Règles de l'Agent Antigravity - Stack React 19 + Zustand, including Linus Torvalds code quality and Steve Jobs design protocols. |
-| [developing-genkit-dart](skills/dev/developing-genkit-dart/SKILL.md) | dev | Generates code and provides documentation for the Genkit Dart SDK. Use when the user asks to build AI agents in Dart, use Genkit flows, or integrate LLMs into D… |
-| [developing-genkit-go](skills/dev/developing-genkit-go/SKILL.md) | dev | Develop AI-powered applications using Genkit in Go. Use when the user asks to build AI features, agents, flows, or tools in Go using Genkit, or when working wit… |
-| [developing-genkit-js](skills/dev/developing-genkit-js/SKILL.md) | dev | Develop AI-powered applications using Genkit in Node.js/TypeScript. Use when the user asks about Genkit, AI agents, flows, or tools in JavaScript/TypeScript, or… |
-| [developing-genkit-python](skills/dev/developing-genkit-python/SKILL.md) | dev | Develop AI-powered applications using Genkit in Python. Use when the user asks about Genkit, AI agents, flows, or tools in Python, or when encountering Genkit e… |
-| [firebase-ai-logic](skills/dev/firebase-ai-logic/SKILL.md) | dev | Official skill for integrating Firebase AI Logic (Gemini API) into web applications. Covers setup, multimodal inference, structured output, and security. |
-| [firebase-app-hosting-basics](skills/dev/firebase-app-hosting-basics/SKILL.md) | dev | Deploy and manage web apps with Firebase App Hosting. Use this skill when deploying Next.js/Angular apps with backends. |
-| [firebase-auth-basics](skills/dev/firebase-auth-basics/SKILL.md) | dev | Guide for setting up and using Firebase Authentication. Use this skill when the user's app requires user sign-in, user management, or secure data access using a… |
-| [firebase-basics](skills/dev/firebase-basics/SKILL.md) | dev | Provides foundational setup, authentication, and project management workflows for Firebase using the Firebase CLI. Use when checking Firebase CLI version… |
-| [firebase-data-connect](skills/dev/firebase-data-connect/SKILL.md) | dev | Build and deploy Firebase SQL Connect (aka Firebase Data Connect) backends with PostgreSQL. Use for schema design, GraphQL queries/mutations, authorization, and… |
-| [firebase-firestore-enterprise-native-mode](skills/dev/firebase-firestore-enterprise-native-mode/SKILL.md) | dev | Comprehensive guide for Firestore enterprise native including provisioning, data model, security rules, and SDK usage. Use this skill when the user needs help s… |
-| [firebase-firestore-standard](skills/dev/firebase-firestore-standard/SKILL.md) | dev | Comprehensive guide for Firestore Standard Edition, including provisioning, security rules, and SDK usage. Use this skill when the user needs help setting up Fi… |
-| [firebase-hosting-basics](skills/dev/firebase-hosting-basics/SKILL.md) | dev | Skill for working with Firebase Hosting (Classic). Use this when you want to deploy static web apps, Single Page Apps (SPAs), or simple microservices. Do NOT us… |
-| [firestore-security-rules-auditor](skills/dev/firestore-security-rules-auditor/SKILL.md) | dev | A skill to evaluate how secure Firestore security rules are. Use this when Firestore security rules are updated to ensure that the generated rules are extremely… |
-| [ai-seo](skills/marketing/ai-seo/SKILL.md) | marketing | When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers. Also use when the… |
+| [experteam-design](skills/experteam/experteam-design/SKILL.md) | experteam | Design system Experteam (by everience) pour créer des sites, landing pages et présentations interactives HTML. À utiliser dès que… |
+| [sx-note-de-frais-ligne](skills/experteam/sx-note-de-frais-ligne/SKILL.md) | experteam | Ajouter une ligne de frais (train, taxi, hôtel, repas) avec justificatif dans la note de frais Everwin SX de l'organisation. |
+| [firebase-ai-logic](skills/firebase/firebase-ai-logic/SKILL.md) | firebase | Official skill for integrating Firebase AI Logic (Gemini API) into web applications. Covers setup, multimodal inference, structured… |
+| [firebase-app-hosting-basics](skills/firebase/firebase-app-hosting-basics/SKILL.md) | firebase | Deploy and manage web apps with Firebase App Hosting. Use this skill when deploying Next.js/Angular apps with backends. |
+| [firebase-auth-basics](skills/firebase/firebase-auth-basics/SKILL.md) | firebase | Guide for setting up and using Firebase Authentication. Use this skill when the user's app requires user sign-in, user management, or… |
+| [firebase-basics](skills/firebase/firebase-basics/SKILL.md) | firebase | Provides foundational setup, authentication, and project management workflows for Firebase using the Firebase CLI. Use when checking… |
+| [firebase-data-connect](skills/firebase/firebase-data-connect/SKILL.md) | firebase | Build and deploy Firebase SQL Connect (aka Firebase Data Connect) backends with PostgreSQL. Use for schema design, GraphQL… |
+| [firebase-firestore-enterprise-native-mode](skills/firebase/firebase-firestore-enterprise-native-mode/SKILL.md) | firebase | Comprehensive guide for Firestore enterprise native including provisioning, data model, security rules, and SDK usage. Use this skill when… |
+| [firebase-firestore-standard](skills/firebase/firebase-firestore-standard/SKILL.md) | firebase | Comprehensive guide for Firestore Standard Edition, including provisioning, security rules, and SDK usage. Use this skill when the user… |
+| [firebase-hosting-basics](skills/firebase/firebase-hosting-basics/SKILL.md) | firebase | Skill for working with Firebase Hosting (Classic). Use this when you want to deploy static web apps, Single Page Apps (SPAs), or simple… |
+| [firestore-security-rules-auditor](skills/firebase/firestore-security-rules-auditor/SKILL.md) | firebase | A skill to evaluate how secure Firestore security rules are. Use this when Firestore security rules are updated to ensure that the… |
 | [analytics](skills/marketing/analytics/SKILL.md) | marketing | When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions "set up tracking,"… |
 | [cold-email](skills/marketing/cold-email/SKILL.md) | marketing | Write B2B cold emails and follow-up sequences that get replies. Use when the user wants to write cold outreach emails, prospecting emails,… |
 | [emails](skills/marketing/emails/SKILL.md) | marketing | When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program. Also use… |
-| [ma-banque-pro-articles](skills/marketing/ma-banque-pro-articles/SKILL.md) | marketing | Rédige des articles de blog SEO pour ma-banque.pro, comparateur de banques professionnelles et néobanques. Utilise ce skill dès que… |
 | [product-marketing](skills/marketing/product-marketing/SKILL.md) | marketing | When the user wants to create or update their product marketing context document. Also use when the user mentions 'product context,'… |
-| [programmatic-seo](skills/marketing/programmatic-seo/SKILL.md) | marketing | When the user wants to create SEO-driven pages at scale using templates and data. Also use when the user mentions "programmatic SEO,"… |
-| [seo-audit](skills/marketing/seo-audit/SKILL.md) | marketing | When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions "SEO audit," "technical SEO,"… |
 | [social](skills/marketing/social/SKILL.md) | marketing | When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram, TikTok, or Facebook,… |
-| [substack-editor](skills/marketing/substack-editor/SKILL.md) | marketing | Use when turning a topic or a finished text into a Substack post ready to paste, or when putting an article into the Substack editor as a… |
+| [ma-banque-pro-articles](skills/redaction/ma-banque-pro-articles/SKILL.md) | redaction | Rédige des articles de blog SEO pour ma-banque.pro, comparateur de banques professionnelles et néobanques. Utilise ce skill dès que… |
+| [substack-editor](skills/redaction/substack-editor/SKILL.md) | redaction | Use when turning a topic or a finished text into a Substack post ready to paste, or when putting an article into the Substack editor as a… |
+| [ai-seo](skills/seo/ai-seo/SKILL.md) | seo | When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers. Also use when the… |
+| [programmatic-seo](skills/seo/programmatic-seo/SKILL.md) | seo | When the user wants to create SEO-driven pages at scale using templates and data. Also use when the user mentions "programmatic SEO,"… |
+| [seo-audit](skills/seo/seo-audit/SKILL.md) | seo | When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions "SEO audit," "technical SEO,"… |
 | [montage-vlog](skills/video/montage-vlog/SKILL.md) | video | À utiliser pour monter un vlog de voyage à partir de rushs bruts (DJI, iPhone, GoPro), d'une journée test jusqu'au film complet. |
 | [podcast-to-vertical-shorts](skills/video/podcast-to-vertical-shorts/SKILL.md) | video | When cutting a long podcast or interview video (e.g. YouTube) into viral vertical shorts for TikTok, Reels or YouTube Shorts. |
 | [prompteur-script](skills/video/prompteur-script/SKILL.md) | video | Génère un script de prompteur pour vidéos YouTube/réseaux sociaux, à partir de notes/un brouillon existant, d'un simple sujet (une phrase,… |
@@ -102,7 +107,7 @@ Copier ou lier **le dossier de la skill** (celui qui contient `SKILL.md` et ses 
 ```bash
 # Une skill pour Claude Code
 mkdir -p ~/.claude/skills
-ln -sfn "$PWD/skills/marketing/seo-audit" ~/.claude/skills/seo-audit
+ln -sfn "$PWD/skills/seo/seo-audit" ~/.claude/skills/seo-audit
 
 # Les mêmes skills pour Cursor
 mkdir -p ~/.cursor/skills

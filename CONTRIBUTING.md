@@ -8,11 +8,15 @@ Les catégories actuelles :
 
 | Dossier | Contenu |
 | --- | --- |
-| `skills/marketing/` | contenu, SEO, analytics, réseaux, édition |
-| `skills/design/` | design systems et présentations interactives |
-| `skills/video/` | montage et déclinaisons vidéo |
-| `skills/ai/` | méthodes qui font travailler des modèles |
-| `skills/admin/` | tâches d'organisation interne |
+| `skills/marketing/` | stratégie produit, mesure, e-mailing, réseaux sociaux |
+| `skills/seo/` | référencement naturel : audit, pages à grande échelle, visibilité dans les IA |
+| `skills/redaction/` | écriture d'articles et de posts (blog, newsletter) |
+| `skills/design/` | méthodes et protocoles de design, présentations interactives (valables pour toute charte) |
+| `skills/video/` | script, montage et déclinaisons vidéo |
+| `skills/ai/` | modèles, agents et SDK d'IA (Genkit, LLM Council) |
+| `skills/firebase/` | plateforme Firebase : CLI, auth, Firestore, hosting, Data Connect, AI Logic |
+| `skills/dev/` | règles et conventions de code |
+| `skills/experteam/` | tout ce qui est propre à Experteam (charte, note de frais, outils internes) : à mettre ici plutôt que dans une catégorie générale |
 
 S'il en faut une nouvelle, créer `skills/<categorie>/` avec un slug en kebab-case (minuscules, chiffres, tirets). Une catégorie = un regroupement, pas une skill.
 
